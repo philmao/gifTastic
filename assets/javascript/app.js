@@ -28,7 +28,7 @@ $(document).on("click", ".topic", function() {
 	var animal = $(this).attr("data-name");
 	console.log(animal);
 
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 	animal + "&api_key=dc6zaTOxFJmzC&limit=" + gifTastic.maxLimit;
 	console.log(queryURL);
 
