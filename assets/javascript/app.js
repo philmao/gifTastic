@@ -91,6 +91,8 @@ $("#add-topic").on("click", function(event) {
 	gifTastic.addTopic();
 
 	gifTastic.renderButtons();
+
+	$("#topic-input").val("");
 });
 
 gifTastic.renderButtons();
