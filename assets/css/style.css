@@ -1,8 +1,8 @@
 
 body {
-	background: lightgrey;
+	background: whitesmoke;
 }
-button {
+#add-topic, button {
 	color: white;
 	background-color: cadetblue;
 	text-align: center;
@@ -10,4 +10,22 @@ button {
 	border-radius: 5px;
 	border: none;
 	padding: 5px 10px;
+}
+label {
+	font-weight: bold;
+}
+#gifs-view {
+	width: 80%;
+}
+.animalDiv {
+	float: left;
+	margin: 0 20px;
+}
+#addTopics {
+	float: right;
+	margin: 0 50px 0 0;
+}
+#topic-input {
+	margin: 10px 0;
+	width: 200px;
 }

@@ -26,11 +26,11 @@ var gifTastic = {
 $(document).on("click", ".topic", function() {
 
 	var animal = $(this).attr("data-name");
-	// console.log(animal);
+	console.log(animal);
 
 	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
 	animal + "&api_key=dc6zaTOxFJmzC&limit=" + gifTastic.maxLimit;
-	// console.log(queryURL);
+	console.log(queryURL);
 
 	$("#gifs-view").empty();
 
@@ -40,7 +40,7 @@ $(document).on("click", ".topic", function() {
 	})
 	.done(function(response) {
 
-		// console.log(response);
+		console.log(response);
 
 		var results = response.data;
 
@@ -48,9 +48,11 @@ $(document).on("click", ".topic", function() {
 
 			var animalDiv = $("<div>");
 
-			var p = $("<p>").text("Rating: " + results[i].rating);
+			var str = results[i].rating;
+			var p = $("<p>").text("Rating: " + str.toUpperCase());
 
 			var animalImage = $("<img>");
+			animalDiv.addClass("animalDiv");
 
 			animalImage.attr("src", results[i].images.fixed_height_still.url);
 			animalImage.attr("data-still", results[i].images.fixed_height_still.url);
@@ -69,7 +71,7 @@ $(document).on("click", ".topic", function() {
 
 $(document).on("click", ".gif", function(event) {
 
-	// console.log(event);
+	console.log(event);
 
 	var state = $(this).attr("data-state");
 
